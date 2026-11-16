@@ -432,13 +432,6 @@ DELETE FROM safari_connect.bookings_staging
 WHERE ctid NOT IN 
     (SELECT MIN(ctid) FROM safari_connect.bookings_staging GROUP BY booking_id);
 
-
-delete from safari_connect.bookings_staging 
-
-
-
-
-
 select * from safari_connect.bookings_staging bs;
 
 
