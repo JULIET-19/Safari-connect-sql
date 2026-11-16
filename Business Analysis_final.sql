@@ -85,7 +85,6 @@ order by Top_Rated;
 
 select * from v_driver_perfomance
 
-select distinct satisfaction from v_clean_trips;
 
 
 /* Question 3
@@ -121,11 +120,9 @@ round(100 *(monthly_revenue - previous_month_revenue)/previous_month_revenue,1) 
 from revenue_trend 
 order by TO_DATE(month_label, 'Month YYYY');
 
-alter view v_revenue_trends
-add column
+select * from v_revenue_trends; --shows how revenue is changing month by month
 
-select * from v_revenue_trends;
-
+-- OR 
 
 CREATE OR REPLACE VIEW v_revenue_trend as
 WITH monthly AS (
